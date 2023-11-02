@@ -47,11 +47,15 @@ button{
     line-height: inherit;
 }
 /* ================глобальные стили==================== */
+html{
+    height: -webkit-fill-available
+}
 body{
     color: #424242;
     font-family: Poppins;
     font-size: 16px;
     font-weight: 400;
+    height: -webkit-fill-available
 }
 /* ==================делаем обертку и прижимаем footer к низу======================== */
 .wrapper{
