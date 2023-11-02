@@ -52,20 +52,12 @@ button{
     --app-height: 100%;
  }
 
-html,
 body{
     color: #424242;
     font-family: Poppins;
     font-size: 16px;
     font-weight: 400;
-    width: 100vw;
-    height: 100vh;
-
-    @media not all and (hover:hover) {
-        height: var(--app-height);
-    }
 }
-
 /* ==================делаем обертку и прижимаем footer к низу======================== */
 .wrapper{
     min-height: 100%;
@@ -178,17 +170,14 @@ body{
 }
 /* ================================делаем header-content================================ */
 .header__content{
+    /* min-height: 100vh; */
     min-height: calc(100vh - 101px);
-    min-width: 100vw;
-}
-.header__content-img{
-    height: calc(100vh - 101px);
-    width: 100vw;
+    width: 100%;
     background-image: url('../img/header-content/header-backround.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    object-fit: cover;
+    background-position: 68% 0%;
 }
+
 
 
 
