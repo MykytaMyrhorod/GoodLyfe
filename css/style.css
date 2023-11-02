@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:regular,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Manrope:regular,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:600&display=swap");
+/* ============================================== */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+html,
+body {
+    height: 100%;
+    min-width: 320px;
+    line-height: 1;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+ul li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    max-width: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+button{
+    cursor: pointer;
+    color: inherit;
+    background-color: transparent;
+    font-weight: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+/* ================глобальные стили==================== */
+body{
+    color: #424242;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+}
+/* ==================делаем обертку и прижимаем footer к низу======================== */
+.wrapper{
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.page{
+    flex: 1 1 auto;
+}
+/* ===================делаем ограничивающий контейнер======================== */
+[class*="__container"] {
+    max-width: 87.0625rem;
+    padding: 0 .9375rem 0 .9375rem;
+    margin: 0 auto;
+}
+/* =============================делаем header================================= */
+.header-top-backround{
+    width: 100%;
+    height: 6.3125rem;
+    background-color: #E43071;
+}
+.header-top{
+    height: 6.3125rem;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+}
+.header-top__logo{
+    min-width: 187px;
+    min-height: 44px;
+    margin-right: auto;
+}
+.header-top__logo img{
+    width: 100%;
+    height: 100%;
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.menu__list{
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1.25rem;
+    row-gap: 10px;
+    justify-content: center;
+}
+.menu__item{
+    margin-right: 4.75rem;
+
+}
+.menu__link{
+    color: #fff;
+    line-height: 109.5%;
+}
+.header-top__search-btn{
+    display: flex;
+    align-items: center;
+}
+.header-top__search{
+    margin-right: .375rem;
+    color: #fff;
+    line-height: 109.5%
+}
+.header-top__search-icon{
+    margin-right: 2.3125rem;
+}
+.header-top_btn{
+    border-radius: 12.5rem;
+    background-color: #fff;
+    padding: 1rem 3.8125rem;
+    color: #E43071;
+    line-height: 109.5%;
+}
+/* =============================делаем burger================================= */
+.header-top__burger-menu{
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+.header-top__burger-menu span{
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    left: 5px;
+    transition: transform .5s;
+}
+.header-top__burger-menu span:nth-child(1){
+    transform: translateY(-10px);
+}
+.header-top__burger-menu span:nth-child(2){
+    
+}
+.header-top__burger-menu span:nth-child(3){
+    transform: translateY(10px);
+}
+.header-top.open .header-top__burger-menu span:nth-child(1){
+    transform: translateY(0) rotate(45deg);
+}
+.header-top.open .header-top__burger-menu span:nth-child(2){
+    opacity: 0;
+}
+.header-top.open .header-top__burger-menu span:nth-child(3){
+    transform: translateY(0) rotate(-45deg);
+}
+/* ======================================================================================= */
+
+@media (max-width: 1255px){
+    .menu__item{
+        margin-right: 50px;
+    }
+}
+@media (max-width: 1105px){
+    .menu__item{
+        margin-right: 34px;
+    }
+}
+@media (max-width: 1024px){
+    .menu{
+        position: absolute;
+        right: -100%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #E43071;
+        flex-direction: column;
+        visibility: hidden;
+        overflow: auto;
+    }
+    .menu__list{
+        padding-top: 56px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu__item{
+        padding: 30px;
+    }
+    .menu__link{
+        padding: 30px;
+    }
+    .header-top__search{
+        display: none;
+    }
+    .header-top__burger-menu{
+        display: block;
+    }
+    .header-top_btn{
+        display: none;
+    }
+    .header-top.open .menu{
+        transform: translateX(-100%);
+        visibility: visible;
+    }
+    .header-top.open .header-top_btn{
+        display: block;
+        position: absolute;
+        top: 500px;
+        right: 0;
+        width: 100%;
+    }
+}
