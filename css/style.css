@@ -163,7 +163,38 @@ body{
 .header-top.open .header-top__burger-menu span:nth-child(3){
     transform: translateY(0) rotate(-45deg);
 }
-/* ======================================================================================= */
+/* ================================делаем header-content================================ */
+.header__content{
+    min-height: calc(100vh - 101px);
+    min-width: 100vw;
+}
+.header__content-img{
+    height: calc(100vh - 101px);
+    width: 100vw;
+    background-image: url('../img/header-content/header-backround.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================================================================================ */
+
+
+
 
 @media (max-width: 1255px){
     .menu__item{
@@ -219,5 +250,5 @@ body{
         right: 0;
         width: 100%;
     }
-    
+
 }
