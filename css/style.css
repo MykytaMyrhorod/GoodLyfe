@@ -126,6 +126,7 @@ body{
 }
 .header-top__search-icon{
     margin-right: 1.125rem;
+
 }
 .header-top_btn{
     border-radius: 200px;
@@ -179,6 +180,7 @@ body{
 }
 .header__content-block{
     height: calc(100vh - 6.3125rem);
+    max-height: 691px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -217,7 +219,11 @@ body{
 /* ================================================================================================ */
 
 
-
+@media (min-width: 87.0625em){
+    .header__title{
+        font-size: 4.375rem;
+    }
+}
 
 @media (max-width: 78.4375rem){
     .menu__item{
