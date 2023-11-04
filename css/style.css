@@ -171,7 +171,8 @@ body{
 }
 /* ================================делаем header-content================================ */
 .header__content{
-    min-height: calc(100svh - 101px);
+    min-height: calc(100dvh - 101px);
+    /* min-height: 100dvh; */
     /* min-height: 100svh; */
     width: 100%;
     background-image: url('../img/header-content/header-backround.png');
