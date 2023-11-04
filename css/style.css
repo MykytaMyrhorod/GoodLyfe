@@ -172,8 +172,6 @@ body{
 /* ================================делаем header-content================================ */
 .header__content{
     min-height: calc(100dvh - 101px);
-    /* min-height: 100dvh; */
-    /* min-height: 100svh; */
     width: 100%;
     background-image: url('../img/header-content/header-backround.png');
     object-fit: cover;
@@ -181,7 +179,7 @@ body{
     background-position: 50% 0%;
 }
 .header__content-block{
-    height: calc(100vh - 6.3125rem);
+    height: calc(100dvh - 6.3125rem);
     max-height: 691px;
     display: flex;
     justify-content: center;
