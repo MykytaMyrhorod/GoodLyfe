@@ -142,6 +142,7 @@ body{
     width: 2.5rem;
     height: 2.5rem;
     border: none;
+    z-index: 5;
 }
 .header-top__burger-menu span{
     position: absolute;
@@ -150,6 +151,7 @@ body{
     background-color: white;
     left: .3125rem;
     transition: transform .5s;
+    z-index: 5;
 }
 .header-top__burger-menu span:nth-child(1){
     transform: translateY(-0.625rem);
@@ -171,7 +173,8 @@ body{
 }
 /* ================================делаем header-content================================ */
 .header__content{
-    min-height: calc(100dvh - 101px);
+    height: calc(100dvh - 101px);
+    max-height: 691px;
     width: 100%;
     background-image: url('../img/header-content/header-backround.png');
     object-fit: cover;
@@ -202,7 +205,55 @@ body{
     border-radius: 2.4063rem;
 }
 
+/* ==================================section-body=============================================== */
+.body__container{
+    max-width: 1159px;
+    margin: 0 auto;
+}
+.body__block{
+    margin-top: 8%;
+    display: flex;
+    gap: 20px;
+}
+.body-left{
+    width: 50%;
+    display: flex;
+}
 
+.body-left__one{
+    max-width: 100%;
+}
+
+.body-left__two{
+    max-width: 100%;
+    margin-top: 23%;
+    margin-left: -22%;
+
+}
+.body-right{
+    width: 50%;
+}
+.body-right__title{
+    color: #E43071;
+    font-weight: 700;
+    font-size: 40px;
+
+}
+.body-right__subtitle{
+    margin-top: 10px;
+    max-width: 540px;
+    line-height: 231.25%; /* 37/16 */
+
+}
+.body-right__btn{
+    margin-top: 35px;
+}
+.body-right__btn button{
+    padding: .9375rem 4.0625rem;
+    border-radius: 2.4063rem;
+    border: .125rem solid #E43071;
+
+}
 
 
 
@@ -246,6 +297,7 @@ body{
         flex-direction: column;
         visibility: hidden;
         overflow: auto;
+        z-index: 2;
     }
     .menu__list{
         padding-top: 3.5rem;
@@ -281,7 +333,24 @@ body{
         top: 31.25rem;
         right: 0;
         width: 100%;
+        z-index: 6;
     }
 
 }
-
+@media (max-width: 48rem){
+    .body__block{
+        margin-top: 8%;
+        display: flex;
+    }
+    .body-left{
+       min-width: 250px;
+    }
+    .body-left__one{
+        width: 176px;
+        height: 248px;
+    }
+    .body-left__two{
+        width: 146px;
+        height: 218px;
+    }
+}
