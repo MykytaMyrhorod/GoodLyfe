@@ -208,7 +208,7 @@ body{
 /* ==================================section-body=============================================== */
 .body__container{
     max-width: 1159px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 .body__block{
     margin-top: 8%;
@@ -222,16 +222,24 @@ body{
 
 .body-left__one{
     max-width: 100%;
+    min-width: 176px;
+    min-height: 248px;
 }
 
 .body-left__two{
     max-width: 100%;
     margin-top: 23%;
     margin-left: -22%;
+    min-width: 146px;
+    min-height: 218px;
+
 
 }
 .body-right{
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .body-right__title{
     color: #E43071;
@@ -337,20 +345,22 @@ body{
     }
 
 }
-@media (max-width: 48rem){
+@media (max-width: 47.5em){
     .body__block{
-        margin-top: 8%;
-        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
     }
-    .body-left{
-       min-width: 250px;
+    .body-right{
+        width: 100%;
     }
-    .body-left__one{
-        width: 176px;
-        height: 248px;
+    .body-right__btn{
+        display: inline;
     }
-    .body-left__two{
-        width: 146px;
-        height: 218px;
+    .body-right__btn button{
+        display: block;
+        width: 100%;
+    }
+    .body-right__subtitle{
+        line-height: 200%;
     }
 }
