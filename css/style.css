@@ -171,7 +171,7 @@ body{
 }
 /* ================================делаем header-content================================ */
 .header__content{
-    height: calc(100dvh - 101px);
+    height: calc(100svh - 101px);
     max-height: 691px;
     width: 100%;
     background-image: url('../img/header-content/header-backround.png');
@@ -180,7 +180,7 @@ body{
     background-position: 50% 0%;
 }
 .header__content-block{
-    height: calc(100dvh - 6.3125rem);
+    height: calc(100svh - 6.3125rem);
     max-height: 691px;
     display: flex;
     justify-content: center;
